@@ -1,6 +1,9 @@
 # enforce-with
 This library makes it possible to enforce the usage of ```with``` keyword
 
+# Installation
+```pip install enforce-with```
+
 # Usage
 @enforce_with.**enforce_with**
 
