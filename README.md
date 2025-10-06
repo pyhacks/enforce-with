@@ -7,7 +7,7 @@ This library makes it possible to enforce the usage of ```with``` keyword
 # Usage
 @enforce_with.**enforce_with**
 
-Decorate your class with this decorator and it will no longer be possible to access the members of its instances unless you access them inside a ```with``` block. Example:
+Decorate your class with this decorator and it will no longer be possible to access the members of its instances unless you access them inside a ```with``` or ```async with``` block. Example:
 ```python
 @enforce_with.enforce_with
 class MyClass:
