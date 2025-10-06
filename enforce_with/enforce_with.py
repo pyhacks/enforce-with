@@ -20,6 +20,12 @@ def enforce_with(cls):
         def __exit__(self, exc_type, exc_value, traceback):
             return self._obj.__exit__(exc_type, exc_value, traceback)
 
+        def __aenter__(self):
+            return self._obj.__aenter__()
+
+        def __aexit__(self, exc_type, exc_value, traceback):
+            return self._obj.__aexit__(exc_type, exc_value, traceback)
+
         def __getattr__(self, name):
             raise AttributeError("This is just a wrapper object. Enter the context manager (i.e, by using a with statement) to access the actual object.")
 
